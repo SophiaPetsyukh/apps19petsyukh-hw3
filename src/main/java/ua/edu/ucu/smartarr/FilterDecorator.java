@@ -31,7 +31,7 @@ public class FilterDecorator extends SmartArrayDecorator{
 
     @Override
     public String operationDescription() {
-        return "FilterDecorator; Remove element if it doesn't satisfy MyPredicate";
+        return "Remove element if it doesn't satisfy MyPredicate";
     }
 
     @Override

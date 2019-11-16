@@ -21,7 +21,7 @@ public class SortDecorator extends SmartArrayDecorator {
 
     @Override
     public String operationDescription() {
-        return "SortDecorator; Sorts elements using MyComparator to compare them";
+        return "Sorts elements using MyComparator to compare them";
     }
 
     @Override

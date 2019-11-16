@@ -23,7 +23,7 @@ public class MapDecorator extends SmartArrayDecorator {
 
     @Override
     public String operationDescription() {
-        return "MapDecorator; Map every element to another object using MyFunction";
+        return "Map every element to another object using MyFunction";
     }
 
     @Override
