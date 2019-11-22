@@ -5,18 +5,17 @@ import java.util.Arrays;
 
 // Sorts elements using MyComparator to compare them
 public class SortDecorator extends SmartArrayDecorator {
-    private MyComparator comp;
+    private Object[] arr;
 
     public SortDecorator(SmartArray smartArray, MyComparator comp) {
         super(smartArray);
-        this.comp = comp;
+        //this.comp = comp;
+        arr = Arrays.stream(this.smartArray.toArray()).sorted(comp).toArray();
     }
 
     @Override
     public Object[] toArray() {
-        Object[] res = smartArray.toArray();
-        Arrays.sort(res, comp);
-        return res;
+        return arr.clone();
     }
 
     @Override

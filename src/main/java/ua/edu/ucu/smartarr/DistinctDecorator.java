@@ -14,21 +14,20 @@ public class DistinctDecorator extends SmartArrayDecorator {
     @Override
     public Object[] toArray() {
         Object[] data = smartArray.toArray();
-        int len = data.length;
-        Object[] res = new Object[len];
+        Object[] res = new Object[data.length];
         int ind = 0;
-        for (int i = 0; i < len; i++) {
-            for (int j = i + 1; j < len; j++) {
+        for (int i = 0; i < data.length; i++) {
+            for (int j = i + 1; j < data.length; j++) {
                 if (data[i].equals(data[j])) {
                     break;
                 }
-                if (j == len - 1) {
+                if (j == data.length - 1) {
                     res[ind] = data[i];
                     ind++;
                 }
             }
         }
-        res[ind] = data[len - 1];
+        res[ind] = data[data.length - 1];
         ind++;
         res = Arrays.copyOf(res, ind);
         return res;

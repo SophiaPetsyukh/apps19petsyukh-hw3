@@ -25,5 +25,9 @@ public class BaseArray implements SmartArray {
         return array.length;
     }
 
+    public void setValue(int index){
+        array[index] = 0;
+    }
+
 
 }
